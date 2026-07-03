@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lassen + Mt. Shasta Weekend Trip — May 16–18, 2026</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #c7522a;
+    --accent-soft: #e9b384;
+    --bg: #fdfaf6;
+    --card: #ffffff;
+    --line: #e6dfd5;
+    --good: #2d7a4f;
+    --warn: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .hero {
+    position: relative;
+    height: 60vh;
+    min-height: 380px;
+    background: url('https://commons.wikimedia.org/wiki/Special:FilePath/Cinder%20Cone%20at%20Lassen%20Volcanic%20National%20Park.jpg') center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    padding: 2rem 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin: 0 0 0.5rem; line-height: 1.1; }
+  .hero .sub { font-size: 1.1rem; opacity: 0.9; margin: 0; }
+  main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  h2 {
+    font-size: 1.6rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; color: var(--ink); }
+  p { margin: 0.5rem 0; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .day-card { border-left: 4px solid var(--accent); }
+  .timeline { list-style: none; padding: 0; margin: 0.75rem 0; }
+  .timeline li {
+    padding: 0.5rem 0 0.5rem 5.5rem;
+    position: relative;
+    border-bottom: 1px dashed var(--line);
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .time {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.95rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .badge.must { background: var(--accent); color: white; }
+  .badge.optional { background: #888; color: white; }
+  .badge.warn { background: var(--warn); color: white; }
+  .badge.good { background: var(--good); color: white; }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .photo {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--line);
+  }
+  .photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .photo .caption {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: white;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  th, td { text-align: left; padding: 0.6rem; border-bottom: 1px solid var(--line); }
+  th { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+  .alert {
+    background: #fff7e6;
+    border-left: 4px solid var(--warn);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+  .alert.good { background: #eaf6ee; border-left-color: var(--good); }
+  .key { color: var(--accent); font-weight: 600; }
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li::before { content: "☐ "; color: var(--accent); margin-right: 4px; }
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+.backlink{position:fixed;top:10px;left:10px;z-index:4000;background:rgba(255,255,255,.92);color:#2e6e4e;text-decoration:none;font:600 .8rem -apple-system,Segoe UI,Roboto,Arial,sans-serif;padding:6px 12px;border-radius:16px;box-shadow:0 1px 5px rgba(0,0,0,.2);border:1px solid rgba(0,0,0,.08)}.backlink:hover{background:#fff}
+</style>
+</head>
+<body>
+<a class="backlink" href="../index.html">← Trip Plans</a>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Lassen + Mt. Shasta Weekend Trip</h1>
+    <p class="sub">May 16 – May 18, 2026 · Millbrae → Redding → Cinder Cone → Mt. Shasta → Home</p>
+  </div>
+</header>
+
+<main>
+
+<section class="card">
+  <h3 style="margin-top:0">Trip at a glance</h3>
+  <table>
+    <tr><th>Depart</th><td>Sat May 16, 8:30 PM — Millbrae</td></tr>
+    <tr><th>Base</th><td>Redding (2 nights)</td></tr>
+    <tr><th>Return</th><td>Mon May 18, by 8:00 PM — Millbrae</td></tr>
+    <tr><th>Headline hike</th><td>Cinder Cone + Painted Dunes (4 mi, 850 ft, ~4 hrs)</td></tr>
+    <tr><th>Total drive</th><td>~9 hrs Sat night + Sun + Mon (incl. Sun side trips)</td></tr>
+  </table>
+</section>
+
+<div class="alert">
+  <strong>Conditions check (May 14 update):</strong> Butte Lake Rd open, Cinder Cone trail open with snow patches.
+  Sulphur Works open to vehicles; main park highway closed past Sulphur Works.
+  <strong>Fire Weather Watch in effect Sat 5 AM – Mon 8 PM</strong> — no campfires, watch for fast-moving fire.
+  Wind gusts 20–30 mph at Cinder Cone summit Sunday.
+</div>
+
+<h2>Weather forecast</h2>
+<table>
+  <tr><th>Location</th><th>Sun May 17</th><th>Mon May 18</th></tr>
+  <tr><td>Redding (560 ft)</td><td>81°F sunny</td><td>78°F sunny</td></tr>
+  <tr><td>Butte Lake / Cinder Cone (~6,000 ft)</td><td>52°F sunny, AM frost, low 30°F</td><td>61°F sunny</td></tr>
+  <tr><td>Lassen Peak area (9,500 ft)</td><td>34°F, gusts 30–40 mph</td><td>41°F sunny</td></tr>
+</table>
+
+<h2>Saturday — Drive to Redding</h2>
+<div class="card day-card">
+  <ul class="timeline">
+    <li><span class="time">8:30 PM</span>Depart Millbrae · I-80 E → I-505 N → I-5 N</li>
+    <li><span class="time">10:30 PM</span>Gas/snack stop in Dunnigan or Williams</li>
+    <li><span class="time">~12:15 AM</span>Arrive Redding hotel · sleep</li>
+  </ul>
+  <p><strong>Lodging suggestions:</strong> Oxford Suites, Fairfield Inn Redding, Best Western Hilltop — all near I-5 for fast Sunday morning departure.</p>
+  <p><strong>Optional late-night stop:</strong> If you arrive before 1 AM and aren't wiped out, the <strong>Sundial Bridge</strong> is illuminated at night and walkable 24/7 — 5 min detour, iconic photo, then sleep. <span class="badge optional">OPTIONAL</span></p>
+</div>
+
+<h2>Sunday — Cinder Cone + Burney Falls <span class="badge must">BUCKET LIST</span></h2>
+
+<div class="gallery">
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cinder%20Cone%20at%20Lassen%20Volcanic%20National%20Park.jpg" alt="Cinder Cone Lassen">
+    <div class="caption">Cinder Cone — your hike summit</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Painted%20Dunes%20and%20Fantastic%20Lava%20Beds%20%28upright%29.jpg" alt="Painted Dunes and Fantastic Lava Beds">
+    <div class="caption">Painted Dunes + Fantastic Lava Beds from the rim</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Burney%20Falls%20in%20April.jpg" alt="Burney Falls">
+    <div class="caption">McArthur-Burney Falls — "the eighth wonder"</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Subway%20Cave.jpg" alt="Subway Cave Lava Tube">
+    <div class="caption">Subway Cave lava tube, Old Station</div>
+  </div>
+</div>
+
+<div class="card day-card">
+  <ul class="timeline">
+    <li><span class="time">6:30 AM</span>Breakfast + fuel up in Redding (last reliable gas)</li>
+    <li><span class="time">7:00 AM</span>Depart east on SR-44 → Old Station → Butte Lake Rd (6 mi gravel)</li>
+    <li><span class="time">9:00 AM</span><strong>Cinder Cone trailhead</strong> (Butte Lake) — start hike <span class="badge must">MUST</span></li>
+    <li><span class="time">9:15 AM – 1:30 PM</span>
+      Hike loop: trailhead → Fantastic Lava Beds → switchbacks up cone (steep, loose cinders) → walk crater rim (Lassen Peak + Mt. Shasta views) → descend toward Painted Dunes overlook → loop back. <strong>4 mi RT, 850 ft gain.</strong>
+    </li>
+    <li><span class="time">1:30 PM</span>Lunch at Butte Lake picnic area (pack it in — no fires per Fire Watch)</li>
+    <li><span class="time">2:30 PM</span>Depart north on SR-89</li>
+    <li><span class="time">3:00 PM</span><strong>Subway Cave Lava Tube</strong> — 0.3 mi flat lava tube walk, headlamps required, free, 30 min <span class="badge optional">EASY</span></li>
+    <li><span class="time">4:15 PM</span><strong>McArthur-Burney Falls State Park</strong> — 129-ft falls fed by underground springs (full flow year-round). 1.3 mi loop, $10 entry <span class="badge must">MUST</span></li>
+    <li><span class="time">5:30 PM</span>Depart via SR-299 W back to Redding (~1 hr 10 min)</li>
+    <li><span class="time">6:45 PM</span>Dinner — Jack's Grill (steakhouse since 1935, walk-in) or Woody's Brewing</li>
+  </ul>
+</div>
+
+<h2>Monday — Mt. Shasta day, drive home <span class="badge good">SCENIC I-5</span></h2>
+
+<div class="gallery">
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/North%20face%20of%20Mount%20Shasta%20at%20sunset-2175.jpg" alt="Mt Shasta">
+    <div class="caption">Mt. Shasta — 14,179 ft stratovolcano</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Shasta%2C%20Lake%20Siskiyou%2C%20SW%20view.jpg" alt="Mt Shasta from Lake Siskiyou">
+    <div class="caption">Mt. Shasta reflected in Lake Siskiyou</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hedge%20Creek%20falls.jpg" alt="Hedge Creek Falls">
+    <div class="caption">Hedge Creek Falls — walk behind the cascade</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Shasta%20City%20Park%20-%20Mount%20Shasta%20City%2C%20California%20-%20DSC02764.JPG" alt="Mt Shasta City Park">
+    <div class="caption">Sacramento River headwaters, City Park</div>
+  </div>
+  <div class="photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sundial%20Bridge%20at%20Turtle%20Bay.jpg" alt="Sundial Bridge Redding">
+    <div class="caption">Sundial Bridge, Redding (Calatrava)</div>
+  </div>
+</div>
+
+<div class="card day-card">
+  <ul class="timeline">
+    <li><span class="time">7:00 AM</span>Coffee + breakfast in Redding · brief Sundial Bridge walk if time</li>
+    <li><span class="time">7:45 AM</span>Depart north on I-5</li>
+    <li><span class="time">8:30 AM</span><strong>Hedge Creek Falls</strong> (Dunsmuir, exit 732) — 0.25 mi to a 30-ft falls you can walk behind into a basalt cave. Free. 30 min total <span class="badge optional">EASY</span></li>
+    <li><span class="time">9:15 AM</span>Continue to Mt. Shasta City</li>
+    <li><span class="time">9:30 AM</span><strong>Mt. Shasta City Park headwaters</strong> + <strong>Sisson Hatchery</strong> — sacred Sacramento River source bursting from the ground; CA's oldest fish hatchery (1888). Free. 45 min combined <span class="badge must">MUST</span></li>
+    <li><span class="time">10:15 AM</span><strong>Drive Everitt Memorial Highway to Bunny Flat (6,860 ft)</strong> — 14 mi paved switchbacks up Mt. Shasta. Get out, walk around, breathe alpine air. ~1 hr round trip <span class="badge must">MUST</span></li>
+    <li><span class="time">11:30 AM</span>Coffee at Seven Suns + grab sandwiches at Berryvale Grocery</li>
+    <li><span class="time">12:00 PM</span>I-5 South · optional 30-min stop at <strong>Castle Crags Vista Point</strong> (exit 724) — see option below</li>
+    <li><span class="time">~7:30 PM</span>Arrive Millbrae</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">🪨 Optional add-on: Castle Crags <span class="badge optional">OPTIONAL</span></h3>
+  <p>Right off I-5 between Mt. Shasta City and Redding (exit 724). Dramatic granite spires that rise 6,000 ft straight up — and the Vista Point gives you a frame-perfect view with Mt. Shasta in the background. Adds ~45 min to your drive home.</p>
+  <ul>
+    <li><strong>Vista Point (drive-up + 0.5 mi RT walk)</strong> — easy paved trail to a panoramic overlook. Zero effort, huge payoff.</li>
+    <li><strong>Indian Creek Loop</strong> (1 mi, easy) — adds ~30 min if you want to stretch your legs</li>
+    <li><strong>Crags Trail to Castle Dome</strong> (5.5 mi, 2,200 ft gain, strenuous) — only if you skipped Cinder Cone (you didn't)</li>
+  </ul>
+  <p><strong>Cost:</strong> $10 day-use fee at the state park entrance.</p>
+  <p><strong>Recommendation:</strong> Stop only if you left Mt. Shasta City by 11:30 AM. Skip if running late — it's a great place but Mt. Shasta + Bunny Flat already gave you the headline view.</p>
+</div>
+
+<h2>Map of the route</h2>
+<div class="card">
+  <p><strong>Sunday loop</strong> (Redding → Butte Lake → Burney → Redding): 220 mi, 5 hrs driving + hike time</p>
+  <p><strong>Monday return</strong> (Redding → Mt. Shasta City → Millbrae): 280 mi, 4.5 hrs driving</p>
+  <p><a href="https://www.google.com/maps/dir/Redding,+CA/Butte+Lake+Campground,+Lassen+Volcanic+National+Park/McArthur-Burney+Falls+Memorial+State+Park/Redding,+CA" target="_blank">View Sunday route on Google Maps →</a></p>
+  <p><a href="https://www.google.com/maps/dir/Redding,+CA/Hedge+Creek+Falls/Mt+Shasta+City+Park/Bunny+Flat+Trailhead/Millbrae,+CA" target="_blank">View Monday route on Google Maps →</a></p>
+</div>
+
+<h2>What I deliberately skipped (and why)</h2>
+<table>
+  <tr><th>Spot</th><th>Why skip</th></tr>
+  <tr><td>Bumpass Hell / Lassen Peak</td><td>Main park road still snowbound in mid-May; trail buried</td></tr>
+  <tr><td>Whiskeytown Falls</td><td>3.5 mi / 700 ft hike — your legs will be wrecked from Cinder Cone</td></tr>
+  <tr><td>Lake Shasta Caverns</td><td>2.5 hr boat+cave tour eats Monday; can't combine with Mt. Shasta</td></tr>
+  <tr><td>Mossbrae Falls</td><td>Trail trespasses on active railroad — illegal</td></tr>
+  <tr><td>Black Butte hike</td><td>5.4 mi / 1,900 ft — too much after Cinder Cone</td></tr>
+  <tr><td>McCloud Falls</td><td>Beautiful but 30 min off I-5 past Mt. Shasta — too far for Mon return</td></tr>
+</table>
+
+<h2>Packing checklist</h2>
+<div class="card">
+  <ul class="checklist">
+    <li>Hiking boots (gaiters help with Cinder Cone's loose cinders)</li>
+    <li>3 L water per person (no shade on Cinder Cone, Fire Watch = dry air)</li>
+    <li>Layers: fleece + windbreaker (40°F + 25 mph wind on the rim)</li>
+    <li>Sun hat, sunscreen, lip balm (intense sun at altitude)</li>
+    <li>Headlamp (Subway Cave + emergency)</li>
+    <li>Trekking poles (recommended for Cinder Cone descent)</li>
+    <li>Snacks + sandwiches for Sunday lunch (no services at Butte Lake)</li>
+    <li>Cash or card for park entry ($30 Lassen, $10 Burney)</li>
+    <li>Offline maps downloaded (no cell at Butte Lake) — Google Maps offline + AllTrails</li>
+    <li>Full tank of gas leaving Redding both days</li>
+  </ul>
+</div>
+
+<h2>Important phone numbers</h2>
+<div class="card">
+  <table>
+    <tr><th>Lassen Volcanic NP</th><td>530-595-6100</td></tr>
+    <tr><th>Burney Falls SP</th><td>530-335-2777</td></tr>
+    <tr><th>Mt. Shasta Ranger Station</th><td>530-926-4511</td></tr>
+    <tr><th>Caltrans road conditions</th><td>1-800-427-7623</td></tr>
+  </table>
+  <p><strong>Day-of:</strong> Call Lassen NP morning of Sunday to confirm Butte Lake Rd open. Cell service at Butte Lake itself = none.</p>
+</div>
+
+<div class="footer">
+  <p>Trip plan generated 2026-05-15 · Conditions accurate as of May 14, 2026 update.<br>
+  Verify current conditions before each leg — mountain weather changes fast.</p>
+</div>
+
+</main>
+</body>
+</html>
